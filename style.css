@@ -14,7 +14,7 @@ body{
     background-color: cyan;
 }
 
-.result{
+.display{
     border: 2px solid black;
     height: 100px;
     margin: 10px;
@@ -29,10 +29,10 @@ body{
     height: 350px;
     margin: 10px;
     border-radius: .5em;
-    background-color: white;
+    background-color: whitesmoke;
 }
 button{
-    background-color: white;
+    background-color: whitesmoke;
     border: none;
     font-size: 35px;
     color: black;
