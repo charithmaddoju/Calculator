@@ -7,7 +7,7 @@ body{
 
 .container{
     border: 5px solid black;
-    height: 500px;
+    height: 550px;
     width: 450px;
     margin: auto;
     margin-top: 100px;
@@ -26,7 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    height: 350px;
+    height: 400px;
     margin: 10px;
     border-radius: .5em;
     background-color: whitesmoke;
@@ -34,8 +34,12 @@ body{
 button{
     background-color: whitesmoke;
     border: none;
-    font-size: 35px;
+    font-size: 30px;
     color: black;
+    
+}
+button:hover{
+    transform: scale(0.8);
 }
 
 .section{
@@ -43,5 +47,12 @@ button{
     display: flex;
     justify-content: space-evenly;
 }
-
+.text{
+    font-size: 30px;
+    padding: 10px;
+}
+.result{
+    font-size: 30px;
+    padding: 5px;
+}
 

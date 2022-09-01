@@ -19,18 +19,58 @@ function divide(a,b){
 
 
 function operate(operator,a,b){
+    let ans = 0;
     switch(operator){
-        case '+':
-            add(a,b);
+        case "+":
+            ans = add(a,b);
             break;
-        case '-':
-            subtract(a,b);
+        case "-":
+            ans = subtract(a,b);
             break;
-        case '*':
-            multiply(a,b);
+        case "*":
+            ans = multiply(a,b);
             break;
-        case '/':
-            divide(a,b);
+        case "/":
+            ans = divide(a,b);
             break;
     }
+    return ans;
 }
+
+const container = document.querySelector('.container');
+const display = document.querySelector('.display');
+const text = document.querySelector('.text');
+const result = document.querySelector('.result');
+const buttons = document.querySelectorAll('.button');
+const equals = document.querySelector('#equals');
+
+let input1 = '';
+let input2 = '';
+let choice = '';
+let flag = 0;
+let temp = text.textContent;
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+
+        if(flag === 1 )
+        {
+            input2 += button.value.toString();
+        }
+
+        else if(button.value === '+' || button.value === '-' || button.value === '*' || button.value === '/' )
+        {
+            input1 = text.textContent;
+            choice = button.value;
+            flag = 1;
+        }
+
+        text.textContent += button.value;    
+        
+    })
+})
+
+equals.addEventListener('click', () => {
+    result.textContent = operate(choice,parseInt(input1), parseInt(input2));
+})
+    
+
