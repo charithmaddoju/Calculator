@@ -43,12 +43,16 @@ const text = document.querySelector('.text');
 const result = document.querySelector('.result');
 const buttons = document.querySelectorAll('.button');
 const equals = document.querySelector('#equals');
+const reset = document.querySelector('.reset');
+const back = document.querySelector('.back');
 
-let input1 = '';
-let input2 = '';
-let choice = '';
-let flag = 0;
-let temp = text.textContent;
+
+    let input1 = '';
+    let input2 = '';
+    let choice = '';
+    let flag = 0;
+    let temp = text.textContent;
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
 
@@ -69,8 +73,18 @@ buttons.forEach((button) => {
     })
 })
 
+console.log(input2)
+
 equals.addEventListener('click', () => {
     result.textContent = operate(choice,parseInt(input1), parseInt(input2));
 })
     
+ reset.addEventListener('click', () => {
+     text.textContent = '';
+     result.textContent = 0;
+ })
 
+// back.addEventListener('click', () => {
+//     const a = text.textContent;
+//     text.textContent = a.slice(0,-1);
+// })
