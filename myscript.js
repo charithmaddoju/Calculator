@@ -81,10 +81,16 @@ equals.addEventListener('click', () => {
     
  reset.addEventListener('click', () => {
      text.textContent = '';
-     result.textContent = 0;
+     result.textContent = '';
+     input1 = '';
+     input2 = '';
+     choice = '';
+     flag = 0;
  })
 
-// back.addEventListener('click', () => {
-//     const a = text.textContent;
-//     text.textContent = a.slice(0,-1);
-// })
+
+ back.addEventListener('click', () => {
+     const someString = text.textContent;
+     const newString = someString.slice(0,-1);
+     text.textContent = newString;
+ })
