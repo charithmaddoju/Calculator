@@ -68,11 +68,22 @@ buttons.forEach((button) => {
             flag = 1;
         }
 
+        
         text.textContent += button.value; 
 
         if(input1 != '' && choice != '' && input2 != ''){
+
         result.textContent = operate(choice,parseInt(input1), parseInt(input2));   
+
+            if(button.value === '+' || button.value === '-' || button.value === '*' || button.value === '/' ){
+                input1 = result.textContent;
+                choice = button.value
+                input2 = '';
+            }
         }
+
+        
+   
         
     result.style.color = "grey";
     result.style.fontSize = "20px";
@@ -81,7 +92,7 @@ buttons.forEach((button) => {
     })
 })
 
-console.log(input2)
+
 
 equals.addEventListener('click', () => {
     result.textContent = operate(choice,parseInt(input1), parseInt(input2));
@@ -89,6 +100,8 @@ equals.addEventListener('click', () => {
     result.style.fontSize = "30px";
     text.style.fontSize = "20px";
     text.style.color = "grey";
+
+      
     
 })
     
