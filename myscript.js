@@ -74,6 +74,10 @@ buttons.forEach((button) => {
         result.textContent = operate(choice,parseInt(input1), parseInt(input2));   
         }
         
+    result.style.color = "grey";
+    result.style.fontSize = "20px";
+    text.style.fontSize = "30px";
+    text.style.color = "black";
     })
 })
 
