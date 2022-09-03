@@ -95,7 +95,7 @@ buttons.forEach((button) => {
 
 
 equals.addEventListener('click', () => {
-    result.textContent = operate(choice,parseInt(input1), parseInt(input2));
+    result.textContent = result.textContent
     result.style.color = "black";
     result.style.fontSize = "30px";
     text.style.fontSize = "20px";
@@ -130,8 +130,7 @@ equals.addEventListener('click', () => {
      else{
         
         choice === '';
-        flag = 0;
-        result.textContent = '';
+        result.textContent = input1
      }
      result.style.color = "grey";
     result.style.fontSize = "20px";
